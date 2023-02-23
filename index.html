@@ -19,34 +19,72 @@
 </head>
 <body>
     <main class="container-sm text-center">
-        <h2>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
-        <div>
-            <form>
-                <label for="nameAndSurname">Nome e Cognome</label>
-                <input type="text" id="nameAndSurname" placeholder="Inserisci Nome e Cognome...">
+        <h2 class="text-white py-3">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
+        <div class="bg-white p-3 rounded-3 mb-5">
+            <form class="d-flex justify-content-around m-auto pb-5">
+                <div class="ms_w_30">
+                    <div class="text-start">
+                        <label for="nameAndSurname" class="ms_c_primary fw-bold">Nome e Cognome</label>
+                    </div>
+                    <div>
+                        <input type="text" id="nameAndSurname" class="w-100 p-1 rounded ms_border_primary" placeholder="Inserisci Nome e Cognome...">
+                    </div>
+                </div>
 
-                <label for="kmDaPercorrere">Km da percorrere</label>
-                <input type="text" id="kmDaPercorrere" placeholder="Inserisci km...">
+                <div class="ms_w_30">
+                    <div class="text-start">
+                        <label for="kmDaPercorrere" class="ms_c_primary fw-bold">Km da percorrere</label>
+                    </div>
+                    <div>
+                        <input type="text" id="kmDaPercorrere" class="w-100 p-1 rounded ms_border_primary" placeholder="Inserisci km da percorrere...">
+                    </div>
+                </div>
 
-                <label for="anni">Fascia d'età</label>
-                <select id="anni">
-                    <option value="minorenne">Minorenne</option>
-                    <option value="maggiorenne">Maggiorenne</option>
-                    <option value="over65">Over 65</option>
-                </select>
+                <div class="ms_w_30">
+                    <div class="text-start">
+                        <label for="anni" class="ms_c_primary fw-bold">Seleziona fascia d'età</label>
+                    </div>
+                    <div>
+                        <select id="anni" class="w-100 p-1 rounded ms_border_primary">
+                            <option value="">--Inserisci età--</option>
+                            <option value="minorenne">Minorenne</option>
+                            <option value="maggiorenne">Maggiorenne</option>
+                            <option value="over65">Over 65</option>
+                        </select>
+                    </div>
+                </div>
             </form>
+            <div>
+                <button id="leggiForm" class="btn btn-success">Genera</button>
+                <button id="resetForm" class="btn btn-danger">Annulla</button>
+            </div>
+        </div>
+        <h2 class="text-white pb-3">IL TUO BIGLIETTO</h2>
 
-            <button id="leggiForm">Genera</button>
-            <button id="resetForm">Annulla</button>
+        <div class="bg-white p-3 rounded-3 text-start">
+            <h3 class="fs-4 fw-bolder ms_c_primary">DETTAGLIO PASSEGGERI</h3>
+            <table class="table text-center">
+                <thead>
+                    <tr>
+                        <th scope="col">NOME PASSEGGERO</th>
+                        <th scope="col">OFFERTA</th>
+                        <th scope="col">NUMERO CARROZZA</th>
+                        <th scope="col">CODICE CP</th>
+                        <th scope="col">COSTO DEL BIGLIETTO</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="ms_border_primary">
+                        <td id="nome" class="text-start fw-semibold"></td>
+                        <td id="offerta"></td>
+                        <td id="nCarrozza"></td>
+                        <td id="nCodice" ></td>
+                        <td id="risultato" class="text-success fw-semibold"></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-        <h2>IL TUO BIGLIETTO</h2>
-        <div>
-            <h1 id="nome">Nome</h1>
-            <h1 id="offerta">Offerta</h1>
-            <h1 id="nCarrozza">Numero Carrozza</h1>
-            <h1 id="nCodice">Codice identificativo</h1>
-            <h1 id="risultato">Prezzo</h1>
-        </div>
+
     </main>
 
 

@@ -23,7 +23,15 @@ body {
     background-color: var(--ms-primary-color);
 }
 
-
+.ms_c_primary {
+    color: var(--ms-primary-color);
+}
+.ms_w_30 {
+    width: 30%;
+}
+.ms_border_primary {
+    border: 2px solid var(--ms-primary-color);
+}
 /* MEDIA QUERY */
 /* Breakpoint sm */
 @media screen and (min-width: 576px) {
