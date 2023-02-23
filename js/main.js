@@ -113,7 +113,17 @@ function() {
     nCodice.innerHTML = '';
     // elimino il contenuto della casella con il prezzo finale
     risultato.innerHTML = '';
-})
+}
+);
+
+resetForm.addEventListener('click', 
+function eraseText() {
+    // elimino il contenuto inserito nella richiesta del nome
+    document.getElementById('nameAndSurname').value = '';
+    // elimino il contenuto inserito nella richiesta dei km
+    document.getElementById('kmDaPercorrere').value = '';
+}
+);
 
 
 
