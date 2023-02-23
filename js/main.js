@@ -1,6 +1,9 @@
 /* 
 JAVASCRIPT
 */
+//nascondo il biglietto quando non ha contenuto
+let biglietto = document.querySelector('#biglietto');
+biglietto.classList.add('d-none');
 
 //definisco la tariffa per ogni chilometro
 const prezzoAlKm = 0.21;
@@ -32,15 +35,11 @@ const leggiForm = document.querySelector('#leggiForm');
 
 const resetForm = document.querySelector('#resetForm');
 
+
 //funzione per attivare il form al click del bottone
 leggiForm.addEventListener('click',
 
     function() {
-        console.log(prezzoAlKm);
-        console.log(nameAndSurname.value);
-        console.log(kmDaPercorrere);
-        console.log(anni.value);
-        console.log(prezzo);
         // se ha meno di 18 anni 
         if (anni.value == 'minorenne') {
             //definisco il nome scritto dall'utente per inserirlo nel biglietto
@@ -97,12 +96,16 @@ leggiForm.addEventListener('click',
             //inserisco il prezzo di tariffa base nel biglietto
             risultato.innerHTML = `${prezzo.toFixed(2)} €`;
         }
+
+        //faccio apparire il biglietto con tutte le informazioni
+        biglietto.classList.add('d-block');
+        biglietto.classList.remove('d-none');
     }
 );
 
 //funzione per resettare il form al click del bottone
 resetForm.addEventListener('click', 
-function() {
+function eraseText() {
     // elimino il contenuto della casella con il nome e cognome
     nome.innerHTML = '';
     // elimino il contenuto della casella con il piano d'offerta
@@ -113,17 +116,17 @@ function() {
     nCodice.innerHTML = '';
     // elimino il contenuto della casella con il prezzo finale
     risultato.innerHTML = '';
-}
-);
-
-resetForm.addEventListener('click', 
-function eraseText() {
+    anni.value = 'reset';
     // elimino il contenuto inserito nella richiesta del nome
     document.getElementById('nameAndSurname').value = '';
     // elimino il contenuto inserito nella richiesta dei km
     document.getElementById('kmDaPercorrere').value = '';
+    //faccio sparire il biglietto senza contenuto
+    biglietto.classList.remove('d-block');
+    biglietto.classList.add('d-none');
 }
 );
+
 
 
 
