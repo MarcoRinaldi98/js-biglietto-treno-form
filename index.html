@@ -36,19 +36,18 @@
                         <label for="kmDaPercorrere" class="ms_c_primary fw-bold">Km da percorrere</label>
                     </div>
                     <div>
-                        <input type="text" id="kmDaPercorrere" class="w-100 p-1 rounded ms_border_primary" placeholder="Inserisci km da percorrere...">
+                        <input type="number" id="kmDaPercorrere" class="w-100 p-1 rounded ms_border_primary" placeholder="Inserisci km da percorrere...">
                     </div>
                 </div>
 
                 <div class="ms_w_30">
                     <div class="text-start">
-                        <label for="anni" class="ms_c_primary fw-bold">Seleziona fascia d'età</label>
+                        <label for="anni" class="ms_c_primary fw-bold">Fascia d'età</label>
                     </div>
                     <div>
                         <select id="anni" class="w-100 p-1 rounded ms_border_primary">
-                            <option value="reset">--Inserisci età--</option>
-                            <option value="minorenne">Minorenne</option>
                             <option value="maggiorenne">Maggiorenne</option>
+                            <option value="minorenne">Minorenne</option>
                             <option value="over65">Over 65</option>
                         </select>
                     </div>
@@ -61,7 +60,7 @@
         </div>
         <h2 class="text-white pb-3">IL TUO BIGLIETTO</h2>
 
-        <div id="biglietto" class="bg-white p-3 rounded-3 text-start">
+        <div id="biglietto" class="bg-white p-3 rounded-3 text-start d-none">
             <h3 class="fs-4 fw-bolder ms_c_primary">DETTAGLIO PASSEGGERI</h3>
             <table class="table text-center">
                 <thead>
